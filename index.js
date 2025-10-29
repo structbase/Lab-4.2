@@ -9,20 +9,24 @@ function addItem(item) {
         shoppingList.push(item);
         console.log(`${item} is added to array.`);
     } else {
-        console.log(
-            `${item} is already in the array, so it wasn't added again`
-        );
+        console.log(`${item} is already in the list`);
     }
-    // shoppingList.push(item);
-    return shoppingList;
+    displayList(); // update UI each time
 }
 
 console.log(addItem("World")); // prints the updated array
 console.log(shoppingList); // same array
 
 // Removes the last item and returns the removed item
+// Removes the last item
 function removeLastItem() {
-    return shoppingList.pop(); // pop() already returns the removed element
+    const removed = shoppingList.pop();
+    if (removed) {
+        console.log(`${removed} removed from the list.`);
+    } else {
+        console.log("The list is already empty.");
+    }
+    displayList();
 }
 
 removeLastItem(); // pops "Backpack"
@@ -30,7 +34,17 @@ console.log(shoppingList); // array without the last item
 
 // Prints every item in the list
 function displayList() {
+    console.log("Current Shopping List:");
     shoppingList.forEach((item) => console.log(item));
+
+    // Task 3: Render list in browser
+    const listContainer = document.querySelector(".dis");
+    listContainer.innerHTML = ""; // clear current list
+    shoppingList.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        listContainer.appendChild(li);
+    });
 }
 
 displayList(); // logs each remaining item on its own line
@@ -38,7 +52,6 @@ displayList(); // logs each remaining item on its own line
 // Task 2: Filter and Search an Array
 function filterItems(searchTerm) {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
-
     return shoppingList.filter((item) =>
         item.toLowerCase().includes(lowerCaseSearchTerm)
     );
@@ -49,3 +62,12 @@ const userInput = document.getElementById("userInput");
 const addButton = document.getElementById("submitItem");
 const removeButton = document.getElementById("removeItem");
 
+addButton.addEventListener("click", () => {
+    const newItem = userInput.value.trim();
+    if (newItem !== "") {
+        addItem(newItem);
+        userInput.value = ""; // Clear input
+    }
+});
+
+removeButton.addEventListener("click", removeLastItem);
