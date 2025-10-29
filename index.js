@@ -44,5 +44,8 @@ function filterItems(searchTerm) {
     );
 }
 
+// Task 3:
+const userInput = document.getElementById("userInput");
+const addButton = document.getElementById("submitItem");
+const removeButton = document.getElementById("removeItem");
 
-// Task 3: 
