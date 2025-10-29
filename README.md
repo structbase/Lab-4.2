@@ -43,6 +43,20 @@ This project demonstrates how to efficiently **add, remove, and filter items** i
 
 ---
 
+
+### 🌐 Live Demo
+
+You can try the Shopping List App directly in your browser without installing anything:
+
+[**Open the Live Demo**](https://your-demo-link.com)
+
+* Add items to the shopping list.
+* Remove the last item from the list.
+* The list updates dynamically as you interact with it.
+
+---
+
+
 ### 🏁 Getting Started
 
 Follow these steps to run the Shopping List App locally:
