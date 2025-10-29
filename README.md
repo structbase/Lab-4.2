@@ -48,7 +48,7 @@ This project demonstrates how to efficiently **add, remove, and filter items** i
 
 You can try the Shopping List App directly in your browser without installing anything:
 
-[**Open the Live Demo**](https://your-demo-link.com)
+[**Open the Live Demo**](https://structbase.github.io/Lab-4.2/)
 
 * Add items to the shopping list.
 * Remove the last item from the list.
