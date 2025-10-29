@@ -14,11 +14,8 @@ function addItem(item) {
     displayList(); // update UI each time
 }
 
-console.log(addItem("World")); // prints the updated array
-console.log(shoppingList); // same array
 
 // Removes the last item and returns the removed item
-// Removes the last item
 function removeLastItem() {
     const removed = shoppingList.pop();
     if (removed) {
@@ -28,9 +25,6 @@ function removeLastItem() {
     }
     displayList();
 }
-
-removeLastItem(); // pops "Backpack"
-console.log(shoppingList); // array without the last item
 
 // Prints every item in the list
 function displayList() {
