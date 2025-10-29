@@ -43,3 +43,6 @@ function filterItems(searchTerm) {
         item.toLowerCase().includes(lowerCaseSearchTerm)
     );
 }
+
+
+// Task 3: 
