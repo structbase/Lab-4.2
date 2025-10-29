@@ -56,12 +56,14 @@ const userInput = document.getElementById("userInput");
 const addButton = document.getElementById("submitItem");
 const removeButton = document.getElementById("removeItem");
 
-addButton.addEventListener("click", () => {
+addButton.addEventListener("click", (event) => {
+    event.preventDefault(); 
     const newItem = userInput.value.trim();
     if (newItem !== "") {
         addItem(newItem);
         userInput.value = ""; // Clear input
     }
 });
+
 
 removeButton.addEventListener("click", removeLastItem);
