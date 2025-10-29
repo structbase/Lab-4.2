@@ -4,7 +4,16 @@ let shoppingList = [];
 
 // Adds an item and returns the updated list
 function addItem(item) {
-    shoppingList.push(item);
+    // Updated for task 2 to prevent duplicates
+    if (!shoppingList.includes(item)) {
+        shoppingList.push(item);
+        console.log(`${item} is added to array.`);
+    } else {
+        console.log(
+            `${item} is already in the array, so it wasn't added again`
+        );
+    }
+    // shoppingList.push(item);
     return shoppingList;
 }
 
@@ -25,3 +34,12 @@ function displayList() {
 }
 
 displayList(); // logs each remaining item on its own line
+
+// Task 2: Filter and Search an Array
+function filterItems(searchTerm) {
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+
+    return shoppingList.filter((item) =>
+        item.toLowerCase().includes(lowerCaseSearchTerm)
+    );
+}
