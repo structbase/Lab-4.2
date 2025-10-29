@@ -3,14 +3,41 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
         <title>Shopping List</title>
     </head>
     <body>
-        <h1>Shopping List</h1>
-        <input type="text" id="userInput" placeholder="Enter an item" />
-        <button id="submitItem">Add Item</button>
-        <button id="removeItem">Remove Last Item</button>
-        <ul class="dis"></ul>
+        <header>
+            <h1>Shopping List</h1>
+        </header>
+
+        <main>
+            <form id="shoppingForm">
+                <label for="userInput">Add an item:</label>
+                <input type="text" id="userInput" placeholder="Enter an item" />
+                <button type="submit" id="submitItem">Add Item</button>
+                <button type="button" id="removeItem">Remove Last Item</button>
+            </form>
+
+            <section aria-label="Current shopping list">
+                <ul class="dis"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Shopping List App</p>
+        </footer>
+
         <script src="./index.js"></script>
     </body>
 </html>
